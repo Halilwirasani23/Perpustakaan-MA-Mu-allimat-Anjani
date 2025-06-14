@@ -1,13 +1,13 @@
 /* RESET */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: 'Segoe UI', Tahoma, sans-serif;
-  background: #f7f7f7;
+  background: #f0f2f5;
   color: #333;
   line-height: 1.6;
 }
@@ -18,7 +18,7 @@ body {
   background: url("images/Library books.jpg") no-repeat center center;
   background-size: cover;
   color: white;
-  padding: 60px 20px;
+  padding: 70px 20px;
   text-align: center;
   overflow: hidden;
 }
@@ -27,7 +27,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 0;
 }
 
@@ -37,6 +37,10 @@ body {
   z-index: 1;
 }
 
+.site-header h1 {
+  font-size: 2em;
+}
+
 .site-header span {
   font-size: 0.9em;
   font-weight: 300;
@@ -44,12 +48,12 @@ body {
 
 /* CONTAINER */
 .container {
-  max-width: 1000px;
+  max-width: 960px;
   margin: 20px auto;
   padding: 20px;
-  background: white;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  background: #fff;
   border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 /* BOOK GRID */
@@ -64,12 +68,12 @@ body {
 .book-card {
   flex: 1 1 180px;
   max-width: 240px;
-  background-color: #fff;
+  background: #fff;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   text-align: center;
-  transition: transform 0.2s;
+  transition: transform 0.2s ease;
 }
 
 .book-card:hover {
@@ -78,20 +82,20 @@ body {
 
 .book-card img {
   width: 100%;
-  height: 240px;
+  height: 230px;
   object-fit: cover;
 }
 
 .book-card h3 {
-  margin: 10px 0 5px;
   font-size: 16px;
+  margin: 10px 0 5px;
   color: #2b6e44;
 }
 
 .book-card p {
-  margin: 0 0 12px;
   font-size: 14px;
-  color: #555;
+  color: #666;
+  margin-bottom: 12px;
 }
 
 .book-card a {
@@ -122,26 +126,30 @@ th {
 .button {
   background-color: #4CAF50;
   color: white;
-  padding: 6px 12px;
-  border-radius: 4px;
+  padding: 8px 14px;
+  border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
+  display: inline-block;
+  transition: background 0.3s;
 }
 
 .button:hover {
-  background-color: #45a049;
+  background-color: #388e3c;
 }
 
-/* SECTION FORM & KONTAK */
-.contact-section, .request-section {
-  margin-top: 50px;
-  background: #ffffff;
+/* FORM & KONTAK */
+.contact-section,
+.request-section {
+  margin-top: 40px;
   padding: 20px;
+  background: #fefefe;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-.contact-section h2, .request-section h2 {
+.contact-section h2,
+.request-section h2 {
   color: #2b6e44;
   margin-bottom: 15px;
 }
@@ -149,7 +157,6 @@ th {
 .contact-section a {
   color: #2b6e44;
   font-weight: bold;
-  text-decoration: none;
 }
 
 .request-section form {
@@ -160,7 +167,7 @@ th {
 
 .request-section input,
 .request-section textarea {
-  padding: 10px;
+  padding: 12px;
   font-size: 1em;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -168,20 +175,21 @@ th {
 }
 
 .request-section button {
-  padding: 10px;
+  padding: 12px;
+  font-size: 1em;
   background-color: #4CAF50;
   color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  font-weight: bold;
+  transition: background 0.3s;
 }
 
 .request-section button:hover {
-  background-color: #45a049;
+  background-color: #388e3c;
 }
 
-/* Menu Samping */
+/* SIDEBAR MENU */
 .menu-toggle {
   font-size: 26px;
   background: none;
@@ -196,7 +204,7 @@ th {
 
 .sidebar {
   position: fixed;
-  left: -250px;
+  left: -260px;
   top: 0;
   width: 250px;
   height: 100%;
@@ -217,6 +225,7 @@ th {
   margin: 15px 0;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1.1em;
 }
 
 .overlay {
@@ -231,29 +240,33 @@ th {
   display: block;
 }
 
-
 /* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
   font-size: 0.9em;
   color: #888;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .site-header h1 {
-    font-size: 1.4em;
+    font-size: 1.5em;
+  }
+
+  .container {
+    padding: 15px;
+    margin: 10px;
   }
 
   .book-card img {
     height: 200px;
   }
 
-  .container {
-    margin: 10px;
-    padding: 15px;
+  .menu-toggle {
+    top: 15px;
+    left: 15px;
   }
 }
 
@@ -265,7 +278,7 @@ footer {
 
   .book-card {
     width: 100%;
-    max-width: 95%;
+    max-width: 90%;
   }
 
   th, td {
@@ -276,5 +289,8 @@ footer {
   .button {
     font-size: 0.85em;
   }
-}
 
+  .sidebar {
+    width: 220px;
+  }
+}
