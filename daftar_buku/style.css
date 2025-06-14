@@ -1,0 +1,122 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  .site-header {
+    background: linear-gradient(to right, #4CAF50, #45a049);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .site-header h1 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+  
+  .site-header p {
+    margin-top: 10px;
+  }
+  
+  .site-header .button {
+    background-color: #ffffff;
+    color: #4CAF50;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .site-header .button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Kontainer utama */
+  .container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  
+  /* Tabel */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.95em;
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 30px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .site-header h1 {
+      font-size: 1.4em;
+    }
+  
+    th, td {
+      font-size: 0.9em;
+    }
+  
+    .container {
+      margin: 15px;
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    table {
+      font-size: 0.85em;
+    }
+  
+    .button {
+      padding: 5px 10px;
+      font-size: 0.85em;
+    }
+  }
+  
